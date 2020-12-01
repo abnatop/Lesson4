@@ -5,3 +5,10 @@
 # Пример исходного списка: [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55].
 # Результат: [12, 44, 4, 10, 78, 123].
 
+input = [1, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55, 79]
+is_max = lambda p_1, p_2 : p_2 if p_2 > p_1 else None
+
+temp = [is_max(input[i], input[i+1]) for i in range(len(input) - 1)]
+output = [x for x in temp if x]
+
+print(output)
